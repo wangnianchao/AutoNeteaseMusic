@@ -41,8 +41,7 @@ jobs:
         for p in ${pwd[*]}
         do
         pwd_list[${#pwd_list[*]}]=${p}
-        done
-        
+        done        
         user_num=${#user_list[*]}
         pwd_num=${#pwd_list[*]}
         echo '${{ secrets.USER }}'
@@ -57,7 +56,7 @@ jobs:
         for ((i=0;i<$user_num;i++))
         do
         python3 checkin.py <<EOF
-        ${18350242097}
-        ${wangnianchao=123}
+        ${user_list[$i]}= 18350242097
+        ${pwd_list[$i]}= wangnianchao=123
         EOF
         done
