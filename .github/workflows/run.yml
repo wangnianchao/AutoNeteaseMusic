@@ -45,8 +45,8 @@ jobs:
 
         user_num=${#user_list[*]}
         pwd_num=${#pwd_list[*]}
-        echo $user
-        echo $pwd
+        echo '${{ secrets.USER }}'
+        echo '${{ secrets.USER }}'
         if [ $user_num != $pwd_num ];then
         echo "账号和密码个数不对应"
         exit 1
