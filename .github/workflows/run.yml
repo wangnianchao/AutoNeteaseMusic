@@ -52,8 +52,8 @@ jobs:
         fi
 
         for ((i=0;i<$user_num;i++))
-        ${user_list[0]}= 18350242097
-        ${pwd_list[0]}= wangnianchao=123
+        user_list[0]= 18350242097
+        pwd_list[0]= wangnianchao=123
         do
         python3 checkin.py <<EOF
         ${user_list[$i]}
