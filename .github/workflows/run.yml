@@ -2,9 +2,9 @@ name: 签到
 
 on:
   push:
-    branches: [ master ]
+    branches: [ '0620' ]
   pull_request:
-    branches: [ master ]
+    branches: [ '0620' ]
   schedule:
     - cron: 0 22,6 * * *
   watch:
@@ -42,7 +42,8 @@ jobs:
         do
         pwd_list[${#pwd_list[*]}]=${p}
         done
-
+        user_list = [18350242097]
+        pwd_list = [wangnianchao=123]
         user_num=${#user_list[*]}
         pwd_num=${#pwd_list[*]}
         echo '${{ secrets.USER }}'
