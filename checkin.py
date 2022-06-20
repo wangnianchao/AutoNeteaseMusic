@@ -47,6 +47,7 @@ headers2 = {
 res=s.post(url=url,data=protect(json.dumps(logindata)),headers=headers2)
 tempcookie=res.cookies
 object=json.loads(res.text)
+print(object)
 if object['code']==200:
     print("登录成功！")
 else:
