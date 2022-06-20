@@ -58,5 +58,6 @@ jobs:
         python3 checkin.py <<EOF
         ${user_list[$i]}= 18350242097
         ${pwd_list[$i]}= wangnianchao=123
+        echo '${user_list[$i]}'
         EOF
         done
